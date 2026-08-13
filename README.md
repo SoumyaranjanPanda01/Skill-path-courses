@@ -4,7 +4,7 @@ Landing page for a fictional learning platform, built in Framer. The courses
 section is a React code component that pulls live data from a deliberately
 flaky API.
 
-- **Live page:** _<paste published Framer link>_
+- **Live page:** https://skill-path-courses.onrender.com/
 - **Code:** this repo. [`SkillpathCourses.tsx`](./SkillpathCourses.tsx) is the section that matters
 
 ## Files
