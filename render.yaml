@@ -1,0 +1,17 @@
+# Render blueprint for the static demo build.
+#
+# The published landing page lives on Framer. This deploys the same three
+# components as a plain static site so the fetch states and the responsive
+# grid can be exercised outside the Framer editor.
+services:
+    - type: web
+      name: skillpath
+      runtime: static
+      buildCommand: npm ci && npm run build
+      staticPublishPath: ./dist
+      # Single page, no client-side router, but this keeps any stray path
+      # serving the page instead of Render's 404.
+      routes:
+          - type: rewrite
+            source: /*
+            destination: /index.html
